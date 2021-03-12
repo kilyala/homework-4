@@ -20,13 +20,16 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "ФИО: " + name + "\n" + "Возраст: " + age + "\n" + "Должность: " + position + "\n" + "Почта: " + email + "\n" + "Номер телефона: " + phoneNumber + "\n" + "Зарплата: " + salary + "\n";
-
+        return "ФИО: " + name + "\n" +
+                "Возраст: " + age + "\n" +
+                "Должность: " + position + "\n" +
+                "Почта: " + email + "\n" +
+                "Номер телефона: " + phoneNumber + "\n" +
+                "Зарплата: " + salary + "\n";
     }
     public void print(){
         System.out.println(this);
     }
-
 
     public static void main(String[] args) {
 
@@ -37,9 +40,7 @@ public class Employee {
         members[3] = new Employee("Alexeev Alexey", 58, "Babyfacesitter", "leha@mail", "555752349", 80000);
         members[4] = new Employee("Smirnov Boris", 36, "Programmer", "boryan@mail", "3215467", 200000);
 
-        for (Employee member : members) if (member.age > 40) member.print();
-
+        for (int i = 0; i < members.length; i++)
+            if (members[i].age > 40) members[i].print();
     }
-
-
 }
